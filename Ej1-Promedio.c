@@ -12,7 +12,7 @@ int main()  {
 	{
 		printf("\n");
 		scanf("%f", &Numeros[i]);
-		
+
 		if(Numeros[i]==9999)
 		{
 			break;
@@ -21,16 +21,11 @@ int main()  {
 	
 	a=i-1;
 	
-	for ( i = 0;; i++) 
+	for ( i = 0; i <= a; i++) 
 	{
-		Suma=Suma + Numeros[i]; 
-		
-		if(i==a)
-		{
-			break;
-		}
+		Suma= Suma + Numeros[i]; 
 	}
-	
+
 	a++;
 	
 	Prom=Suma/a;
