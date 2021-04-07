@@ -14,7 +14,7 @@ int main()  {
     printf("Valor2 es igual a: %ld\n ", valor2);
 
     printf("La direccion de valor1 es: %p\n ", &valor1);
-
+                          
     printf("La direccion de ptrL es: %p\n ", ptrL);
 
     return 0;
