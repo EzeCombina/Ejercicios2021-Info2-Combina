@@ -2,7 +2,7 @@
 
 #define pulsador1 9
 #define pulsador2 8
-unsigned int x=2;
+unsigned int x=3;
 
 void setup()
 {
