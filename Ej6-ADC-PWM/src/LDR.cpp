@@ -1,6 +1,6 @@
 #include <arduino.h>
 
-#define Led 8 //Pin del led
+#define Led 11 //Pin del led
 #define Luz 0 
 
 void setup()

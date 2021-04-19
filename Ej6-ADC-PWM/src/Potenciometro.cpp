@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#define Led 8 //Pin del led
+#define Led 11 //Pin del led
 #define Pot 0 //Pin del potenciometro
 
 void setup()
