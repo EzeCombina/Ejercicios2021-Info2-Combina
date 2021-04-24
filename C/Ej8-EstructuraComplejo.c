@@ -15,12 +15,11 @@ int main()  {
 
     printf("%.2lf  %.2lf", px->real, px->imaginario);
 
-    printf("\nNumero real: ");
-    scanf("%lf", &cx[18].real);
+    int i=18;
 
-    printf("\nNumero imaginario: ");
-    scanf("%lf", &cx[18].imaginario);
+    cx[i].real=1.6;
+    cx[i].imaginario=-2.5;
 
-    printf("%.3lf  %.3lf", cx[18], cx[18]);
+    printf("\n%.2lf  %.2lf", cx[i].real, cx[i].imaginario);
 
 }
