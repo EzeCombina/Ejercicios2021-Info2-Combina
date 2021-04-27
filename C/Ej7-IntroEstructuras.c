@@ -4,7 +4,7 @@ struct cliente{
 
     char apellido[15];
     char nombre[15];
-    int numeroCliente;
+    int  numeroCliente;
 
     struct {
 
