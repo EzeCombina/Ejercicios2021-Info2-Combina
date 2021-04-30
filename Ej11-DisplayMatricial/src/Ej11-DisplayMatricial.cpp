@@ -12,12 +12,12 @@ byte ledc, ledf;
 void loop() {
   for(ledf = B00000001; ledf <= B10000000; ledf = ledf<<1)
   {
-    PORTD = ledc;
+    PORTD = ~ledf;
 
     for(ledc = B00000001; ledc <= B00100000; ledc = ledc<<1)
     {
       PORTB = ledc;
-      delay(1000); 
+      delay(500); 
     }    
   }
 }
