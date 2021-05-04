@@ -15,7 +15,7 @@ int main()  {
 
     printf("%.2lf  %.2lf", px->real, px->imaginario);
 
-    int i=18;
+    int i=17;
 
     cx[i].real=1.6;
     cx[i].imaginario=-2.5;

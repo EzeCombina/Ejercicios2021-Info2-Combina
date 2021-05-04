@@ -2,18 +2,18 @@
 
 struct sensores{
 
-    char tipo_sensor;
-    int valor_sensor;
-    unsigned long tiempo_sensor;
+    char tipo_sensor;            // 1 byte
+    int valor_sensor;            // 4 byte
+    unsigned long tiempo_sensor; // 8 byte
 
 }z;
 
 int main()  {
 
-    float x; 
+    int x; 
 
-    x = sizeof(z.tiempo_sensor);
+    x = sizeof(z);
 
-    printf("%.2lf", x);
+    printf("%d", x);             // 16
 
 }
