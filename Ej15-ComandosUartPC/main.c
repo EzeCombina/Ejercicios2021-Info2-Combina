@@ -24,7 +24,7 @@ compile with the command: gcc main.c rs232.c -Wall -Wextra -o2 -o ejercicio15
 
 int main()
 {
-  int n, Puerto = 6, Velocidad = 115600;       
+  int n, Puerto = 6, Velocidad = 9600;       
 
   unsigned char buf[4096];
 

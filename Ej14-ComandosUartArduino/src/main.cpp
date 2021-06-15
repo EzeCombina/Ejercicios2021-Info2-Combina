@@ -6,7 +6,7 @@ String datosRecibidos;
 
 void setup()
 {
-  Serial.begin(115200);   //Inicializa el puerto  serie a 115200 baudios
+  Serial.begin(9600);   //Inicializa el puerto  serie a 115200 baudios
   pinMode(LED,OUTPUT);
 }
 
