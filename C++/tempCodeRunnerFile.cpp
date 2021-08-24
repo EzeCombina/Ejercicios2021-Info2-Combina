@@ -1,0 +1,2 @@
+
+    f.escritura(&f);

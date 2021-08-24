@@ -4,7 +4,7 @@ using namespace std;
 
 int main()  {
 
-    char nombre[10], domicilio[10], ciudad[10], estado[10];
+    char nombre[50], domicilio[50], ciudad[50], estado[50];
     int codigop;
 
     cout << "Igresar nombre: ";
