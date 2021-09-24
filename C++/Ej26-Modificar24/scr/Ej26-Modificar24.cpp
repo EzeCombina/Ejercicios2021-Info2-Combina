@@ -1,54 +1,57 @@
 #include <iostream>
-
-using namespace std; 
-
+#include <iomanip>
 #include "../inc/Ej26_24.h"
 
-Complejo::Complejo(double p_, double q_)  {
+using std::cout;
+using std::endl;
 
-    cout << "Valores por defecto: ( " << p_ << " +- i * " << q_ << " )" << endl;
-
-    // Estos valores van a quedar en la funcion ya que estan pasados por valos y no por referencia.
-
+Complejo::Complejo ()
+{
+	p = 5;
+	q = 6;
 }
 
-Complejo::Complejo()  {
-
-    cout << "Ingresar parte real del numero : " << endl;
-    cin >> p;
-
-    cout << "Ingresar parte imaginaria del numero : " << endl;
-    cin >> q;
-
+Complejo::Complejo (double real, double imaginario)
+{
+	establecerComplejo(real, imaginario);
 }
 
-void Complejo::suma(Complejo n1, Complejo n2)  {
- 
-    double sumar, sumai;
-
-    sumar = n1.p + n2.p;
-    sumai = n1.q + n2.q;
-
-    cout << "La suma es igual a: ( " << sumar << " +- i * " << sumai << " )" << endl;
-
+Complejo &Complejo::establecerComplejo (double r, double i)
+{
+	setp(r); 
+    seti(i);
+    return *this;
 }
 
-void Complejo::resta(Complejo n1, Complejo n2)  {
-
-    double restar, restai;
-
-    restar = n1.p - n2.p;
-    restai = n1.q - n2.q;
-
-    cout << "La resta es igual a: ( " << restar << " +- i * " << restai << " )" << endl;
-       
+Complejo &Complejo::setp(double real_)
+{
+    p = real_;
+    return *this;
 }
 
-void Complejo::imprimir(Complejo n1, Complejo n2) const  {
+Complejo &Complejo::seti(double imaginario_)
+{
+    q = imaginario_;
+    return *this;
+}
 
+Complejo Complejo::sumaComplejo(Complejo a)
+{	
+	Complejo c;
+	c.p = a.p + p;
+	c.q = a.q + q; 
+	return (c);
+}
 
-    cout << "Valores ingresados: ( " << n1.p << " +- i * " << n1.q << " )" << endl;
-    cout << "Valores ingresados: ( " << n2.p << " +- i * " << n2.q << " )" << endl;
-    
+Complejo Complejo::restaComplejo(Complejo a)
+{	
+	Complejo c;
+	c.p = a.p - p;
+	c.q = a.q - q; 
+	return (c);
+}
 
+void Complejo::imprimirComplejo() const
+{
+	cout<< p << " + ("<< q << "i)\n";
 }

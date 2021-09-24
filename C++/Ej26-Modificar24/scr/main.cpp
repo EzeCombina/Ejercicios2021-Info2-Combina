@@ -1,18 +1,22 @@
 #include <iostream>
-
-using namespace std; 
-
 #include "Ej26-Modificar24.cpp"
 
-int main()  {
+using std::cout;
+using std::endl;
 
-    const Complejo n1(1, 2);
+int main(){
+
+	const Complejo n1(7,11);
     Complejo n2, n3;
 
-    n2.suma(n2, n3);
-    n2.resta(n2, n3);
-    n1.imprimir(n2, n3);
-
-    return 0;
-
+	cout << "El primer numero es: ";
+	n1.imprimirComplejo();
+    cout << "El segundo numero es: ";
+	n2.establecerComplejo(4,5).imprimirComplejo();
+	cout << "La suma es: ";
+	n3 = n2.sumaComplejo(n1);
+	n3.imprimirComplejo();
+	n3 = n2.restaComplejo(n1);
+	cout << "La resta es: ";
+	n3.imprimirComplejo();
 }

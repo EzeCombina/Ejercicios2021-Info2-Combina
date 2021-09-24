@@ -1,16 +1,18 @@
-#ifndef EJ24_H
-#define EJ24_H
+#ifndef EJ26_24_H
+#define EJ26_24_H
 
-class Complejo {
-    private:
-        double p;
-        double q; 
-    public:
-        Complejo();
-        Complejo(double p_, double q_); 
-        void suma(Complejo n1, Complejo n2);
-        void resta(Complejo n1, Complejo n2);
-        void imprimir(Complejo n1, Complejo n2) const; 
+class Complejo{
+	public: 
+		Complejo();								
+		Complejo (double real, double imaginario);
+		Complejo sumaComplejo(Complejo a);
+		Complejo restaComplejo(Complejo a);
+		Complejo &establecerComplejo(double real, double imaginario);
+        Complejo &setp(double real);
+        Complejo &seti(double imaginario);
+		void imprimirComplejo() const;	
+	private:
+		double p,q; 	
 };
 
 #endif
