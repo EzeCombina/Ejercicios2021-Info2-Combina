@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#ifndef EJ25_H
-#define EJ25_H
+#ifndef EJ28_H
+#define EJ28_H
 
 class Persona {
     protected:

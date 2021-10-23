@@ -1,5 +1,5 @@
-#ifndef EJ25_H
-#define EJ25_H
+#ifndef EJ27_H
+#define EJ27_H
 
 class Rectangulo {
     private:
