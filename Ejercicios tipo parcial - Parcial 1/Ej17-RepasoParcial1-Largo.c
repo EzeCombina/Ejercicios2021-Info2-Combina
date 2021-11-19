@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-int i = 0, C = 0, z, c = 0; 
+int i = 0, C = 0, z, c = 0;   // Prueba
 
 struct Producto {
     char Desc[100];   // Descripcion del producto 
