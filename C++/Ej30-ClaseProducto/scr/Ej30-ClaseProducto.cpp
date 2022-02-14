@@ -1,50 +1,70 @@
 #include <iostream>
-#include <string>
-#include <vector>
-
-using namespace std; 
-
 #include "../inc/Ej30.h"
 
-Productos::Productos(string n_, int p_)  {
+using namespace std;
 
-    this->Nombre = n_;
-    this->Precio = p_;
+producto::producto(string n_, float p_, int c_)  {
 
-}
-
-void Empleado::plus(int p_)  {
-
-    Plus = p_;
+    this->nombre = n_;
+    this->precio = p_;
+    this->cantidad = c_;
 
 }
 
-string Empleado::get_nombre()  {
+string producto::get_nombre()  {
 
-    return Nombre;  
-
-}
-
-int Empleado::get_edad()  {
-
-    return Edad;
+    return nombre;
 
 }
 
-int Repartidor::get_zona()  {
+float producto::get_precio()  {
 
-    return Zona;
-
-}
-
-int Comercial::get_comision()  {
-
-    return Comision;
+    return precio; 
 
 }
 
-int Empleado::get_salario()  {
+int producto::get_cantidad()  {
 
-    return (Salario + Plus);
+    return cantidad; 
+
+}
+
+int per::get_diascad()  {
+
+    return dc;
+
+}
+
+char noper::get_tipo()  {
+
+    cout << t << endl;
+
+}
+
+void producto::calcular(int dato)  {
+
+    if((dato == 1) || (dato == 2) || (dato == 3))
+    {
+        switch (dato)
+        {
+            case 1:
+                precio = (precio / 4) * cantidad;
+                break;
+
+            case 2:
+                precio = (precio / 3) * cantidad;
+                break;
+
+            case 3:
+                precio = (precio / 2) * cantidad;
+                break;  
+
+        }
+    }
+
+    else 
+    {
+        precio = precio * cantidad;
+    }
 
 }

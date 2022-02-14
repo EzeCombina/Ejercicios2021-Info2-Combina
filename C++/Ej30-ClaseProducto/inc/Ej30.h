@@ -1,45 +1,43 @@
 #include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 
 #ifndef EJ30_H
 #define EJ30_H
 
-class Productos {
+class producto {
     private:
-        string Nombre;
-        float Precio;
-        int Cantidad;
-        //int Plus;
+        string nombre;
+        float precio;
+        int cantidad;
     public:
-        Productos(string n_, int p_, int c_);
+        producto(string n_, float p_, int c_);
         string get_nombre();
-        int get_precio();
-        void calcular(int c_);
+        float get_precio();
+        int get_cantidad();
+        void calcular(int dato);
 };
 
-class Perecedero : public Productos {
+class per: public producto {
     private:
-        int Dias_a_Caducar;
+        int dc;
     public:
-        Perecedero(int Dias_a_Caducar, string n_, int p_, int c_) : Productos(n_, p_, c_) {
-            this->Dias_a_Caducar = Dias_a_Caducar;
-            calcular(c_);
+        per(string n_, float p_, int c_, int dc_) : producto(n_, p_, c_) {
+            this->dc = dc_;
+            calcular(dc);
         }
-        int get_dias_a_caducar();
+        int get_diascad();
 };
 
-class NoPerecedero : public Productos {
+class noper : public producto {
     private:
-        int Tipo;
+        char t;
     public:
-        NoPerecedero(int Tipo, string n_, int p_, int c_) : Productos(n_, p_, c_) {
-            this->Tipo = Tipo;
-            calcular(c_);
+        noper(string n_, float p_, int c_, char t_) : producto(n_, p_, c_) {
+            this->t = t_;
+            calcular(t);
         }
-        int get_tipo();    
+        char get_tipo();
 };
 
 #endif
